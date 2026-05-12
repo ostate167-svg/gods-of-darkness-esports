@@ -31,7 +31,7 @@ export default function TournamentsPage() {
           <div key={t._id} className="rounded-xl border border-white/10 bg-[#1a1a1a] p-4 shadow-[0_10px_28px_rgba(0,0,0,0.3)]">
             <h3 className="text-xl font-semibold text-white">{t.gameName}</h3>
             <p className="text-zinc-300">{new Date(t.date).toLocaleDateString()}</p>
-            <p className="text-zinc-300">Entry: ${t.entryFee} | Max Players: {t.maxPlayers}</p>
+            <p className="text-zinc-300">Entry: Rs. {t.entryFee} | Max Players: {t.maxPlayers}</p>
             <button onClick={() => join(t._id)} className="mt-3 rounded-lg border border-[#FF3B3B]/45 bg-[#D61F1F] px-3 py-2 text-white hover:bg-[#b81a1a]">Join Tournament</button>
           </div>
         ))}

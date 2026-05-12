@@ -32,7 +32,7 @@ export default function StorePage() {
             <img src={p.image} alt={p.name} className="h-40 w-full rounded object-cover" />
             <h3 className="mt-2 text-lg font-semibold text-white">{p.name}</h3>
             <p className="text-sm text-zinc-300">{p.description}</p>
-            <p className="mt-1 font-bold text-red-300">${p.price}</p>
+            <p className="mt-1 font-bold text-red-300">Rs. {p.price}</p>
             <button onClick={() => add(p)} className="mt-2 rounded-lg border border-[#FF3B3B]/45 bg-[#D61F1F] px-3 py-2 text-white hover:bg-[#b81a1a]">Add to Cart</button>
           </div>
         ))}

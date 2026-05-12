@@ -65,7 +65,10 @@ router.post('/admin-login', async (req, res) => {
   try {
     const { username, password, adminSecret } = req.body;
 
+    console.log("username: ", username, "password: ", password, "adminSecret: ", adminSecret)
+
     if (adminSecret !== process.env.ADMIN_SECRET) {
+      console.log("secret not match")
       return res.status(401).json({ message: 'Invalid admin secret' });
     }
 
